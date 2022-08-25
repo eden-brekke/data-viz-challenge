@@ -3,9 +3,9 @@
 ## Objective
 Create a data visualization that helps answer the question, **“What population is most affected by opioid use disorders?”**
 
-You can choose to either start from scratch or build off the provided starter project in this repo. 
-Either approach will be weighted equally when your exercise is reviewed. 
-If you choose to use the starter project, you may modify any of the files provided as you see fit, or choose to only use some of them. 
+You can choose to either start from scratch or build off the provided starter project in this repo.  
+Either approach will be weighted equally when your exercise is reviewed.  
+If you choose to use the starter project, you may modify any of the files provided as you see fit, or choose to only use some of them.  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Your application should include some interactivity for the user. We leave it to you to decide how best to visualize the data.
