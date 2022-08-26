@@ -12,9 +12,9 @@ export default function App(props) {
       const metadata = await api.fetchMetadata();
       const citation = await api.fetchCitation();
       const newData = await api.fetchData({
-        location_name: ['Belize', 'Venezuela'],
-        year_name: [1990, 2015],
-        sex_name: ['Males', 'Females'],
+        location_name: [],
+        year_name: [],
+        sex_name: [],
       });
       setData(newData);
       console.log({ metadata, citation, newData });
