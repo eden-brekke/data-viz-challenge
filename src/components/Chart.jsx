@@ -9,7 +9,6 @@ export default function Chart({data}){
     height: window.innerHeight,
   })
   const update = useRef(false)
-  console.log(data.location_name)
   useEffect(()=>{
     window.addEventListener('resize', ()=>{
       setDimensions({
