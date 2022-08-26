@@ -29,7 +29,7 @@ export default function ControlPanel() {
   return (
     <div className="control-panel">
       <SexControl value={sex} onChange={handelSexChange} />
-      <YearControl max={2022} min={1990} value={year} onChange={handelYearChange} />
+      <YearControl max={2017} min={1990} value={year} onChange={handelYearChange} />
     </div>
   );
 }
