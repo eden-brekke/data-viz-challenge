@@ -25,7 +25,7 @@ export default function App(props) {
   if (data){
   return (
     <div className="App">
-      <Header />
+      <Header data={data}/>
       <Viz data={data}/>
       <Footer />
     </div>
