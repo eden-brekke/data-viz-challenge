@@ -60,6 +60,16 @@ export default function Chart({data}){
                     .attr('y', (d,i) => y(d.mean))
                     .attr('height', d=>y(0)-y(d.mean))
                     .attr('width', x.bandwidth())
+
+    svg.append('g')
+              .selectAll("rect")
+              .sort((a,b)=>d3.ascending(a.mean, b.mean))
+              .attr("y", (d,i)=>i*20);
+          
+    svg.append('g')
+              .selectAll("text")
+              .sort((a,b)=>d3.ascending(a.mean, b.mean))
+              .attr("y", (d,i)=>i*20+17);
   }
   return (
     <div id="barchart">
