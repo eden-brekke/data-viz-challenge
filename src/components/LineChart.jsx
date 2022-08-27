@@ -102,8 +102,9 @@
 // }
 
 
-import React, {useState, useRef, useEffect} from 'react';
+import React, { useRef, useEffect} from 'react';
 import * as d3 from 'd3';
+import LineControlPanel from './LineControlPanel';
 
 function LineChart({data}){
   const svgRef = useRef();
@@ -117,23 +118,48 @@ function LineChart({data}){
       .attr('height', height)
       .style('background', 'd3d3d3')
       .style('margin-top', '50')
+      .style('overflow','visible');
     // setting up the scaling
+    // setting axes
     const xScale = d3.scaleLinear()
-      .domain([0, data.length - 1])
+      .domain(d3.extent(data, function(d){return d.year_name;}))
       .range([0, width]);
+    svg.append('g')
+      .attr('transform', 'translate(0.'+height+')')
+      .call(d3.axisBottom(xScale).ticks(27))
     
     const yScale = d3.scaleLinear()
-      .domain([0, height])
+      .domain([0, d3.max(data, function(d){return +d.mean})])
       .range([height, 0]);
+    svg.append('g')
+      .call(d3.axisLeft(yScale))
     
     const generateScaledLine = d3.line()
       .x((d, i)=> xScale(i))
       .y(yScale)
-    // setting axes
+      .curve(d3.curveCardinal);
+    // color
+    let res = data.map(function(d){return d.key})
+    let color = d3.scaleOrdinal()
+      .domain(res)
+      .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf','#999999'])
     // setting up the data for the svg
-  }, [data]);
+    svg.selectAll('.line')
+      .data([data])
+      .append('path')
+        .attr('d', d => generateScaledLine(d))
+        .attr('fill', 'none')
+        .attr('stroke',function(d){return color(d.key)})
+        .attr("d", function(d){
+          return d3.line()
+            .x(function(d){return xScale(d.year_name);})
+            .y(function(d){return yScale(+d.mean);})
+            (d.location_name)
+        })
+  });
   return(
     <div>
+      <LineControlPanel />
       <svg ref={svgRef}></svg>
     </div>
   )
