@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import * as api from '../api';
 import ControlPanel from './ControlPanel';
 import Viz from './Viz';
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
 
 export default function App(props) {
   const [data, setData] = useState(null);
@@ -25,8 +27,10 @@ export default function App(props) {
   if (data){
   return (
     <div className="App">
+      <Header />
       <ControlPanel />
       <Viz data={data}/>
+      <Footer />
     </div>
   );
   } else {
