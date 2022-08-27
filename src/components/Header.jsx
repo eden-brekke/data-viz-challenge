@@ -1,7 +1,11 @@
 import React from "react";
 import './Header.css'
+import LineChart from "./LineChart";
+import Chart from "./Chart";
+import Chart2 from "./Chart2";
+import {Link, BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
-export default function Header(){
+export default function Header({data}){
   return (
     <>
     <div>
@@ -10,13 +14,18 @@ export default function Header(){
     <div>
       <h2>Data Visualization Challenge</h2>
     </div>
-    <nav>
-      <ul>
-        <li>Highest Mortality Rates</li>
-        <li>Lowest Mortality Rates</li>
-        <li>Yearly Death Rates per Location</li>
-      </ul>
-    </nav>
+    <Router>
+      <nav>
+        <Link to="/highrates">Highest Mortality Rates</Link>
+        <Link to='/lowrates'>Lowest Mortality Rates</Link>
+        <Link to="/yearlyrates">Yearly Death Rates per Location</Link>
+      </nav>
+      <Routes>
+        <Route path="/highrates" element={<Chart data={data}/>} />
+        <Route path="/lowrates" element={<Chart2 data={data}/>} />
+        <Route path="/yearlyrates" element={<LineChart data={data}/>} />
+      </Routes>
+    </Router>
     </>
   )
 }
