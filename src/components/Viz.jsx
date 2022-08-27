@@ -7,9 +7,9 @@ export default function Viz({data}) {
   // TODO : Visualize the data!
   return (
   <>
-    <Chart data={data} />
+    {/* <Chart data={data} />
     <Chart2 data={data} />
-    <LineChart data={data} />
+    <LineChart data={data} /> */}
     {/* <main className="viz">Viz goes here</main> */}
   </>
   );
