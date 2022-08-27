@@ -18,18 +18,9 @@ export default function ControlPanel() {
     [setSex],
   );
 
-  // function connected to "onChange" event within the year selector
-  const handelYearChange = useCallback(
-    (nextValue) => {
-      setYear(nextValue);
-    },
-    [setYear],
-  );
-
   return (
     <div className="control-panel">
       <SexControl value={sex} onChange={handelSexChange} />
-      <YearControl max={2017} min={1990} value={year} onChange={handelYearChange} />
     </div>
   );
 }
