@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import * as d3 from 'd3';
 import './Chart.css';
+import ControlPanel from './ControlPanel';
 
 export default function Chart({data}){
   const d3Chart = useRef()
@@ -72,9 +73,12 @@ export default function Chart({data}){
               .attr("y", (d,i)=>i*20+17);
   }
   return (
+    <>
+    <ControlPanel />
     <div id="barchart">
       <svg ref={d3Chart}></svg>
     </div>
+    </>
   )
 }
 
