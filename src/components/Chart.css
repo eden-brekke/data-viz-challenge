@@ -1,8 +1,12 @@
-#barchart{
-  width: 100vw;
-  height: 50vh;
+#BarChart {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 50px;
 }
-#linechart{
-  width: 100vw;
-  height: 50vh;
+
+.bar {
+  background-color: #3aa70f;
+  width: 10px;
 }
