@@ -1,36 +1,31 @@
-import { useEffect, useState } from 'react';
 import * as api from '../api';
-import Viz from './Viz';
-import Header from './Header.jsx';
-import Footer from './Footer.jsx';
+import { useEffect, useState } from 'react'
+import ControlPanel from './ControlPanel.jsx';
 
-export default function App(props) {
-  const [data, setData] = useState(null);
-  // Example of how you could fetch data
+
+function App(props) {
+  const [sexMeta, setSexMeta] = useState(['Loading']);
+  const [locMeta, setLocMeta] = useState(['Loading']);
+  const [yearMeta, setYearMeta] = useState(['Loading']);
   useEffect(() => {
-    async function fetchData() {
-      const metadata = await api.fetchMetadata();
+    console.log("hello effect use")
+    async function fetchMeta() {
+      console.log("beginning of fetch")
+      const sexmeta = await api.fetchSexMetadata();
+      const locmeta = await api.fetchLocationMetadata();
+      const yearmeta = await api.fetchYearMetadata();
       const citation = await api.fetchCitation();
-      const newData = await api.fetchData({
-        location_name: [],
-        year_name: [],
-        sex_name: [],
-      });
-      setData(newData);
-      console.log({ metadata, citation, newData });
+      setSexMeta(sexmeta);
+      setYearMeta(yearmeta);
+      setLocMeta(locmeta);
+      console.log(sexmeta, locmeta, yearmeta);
+      console.log('ye be oporate?')
     }
-    fetchData();
-  }, [props.id]);
-
-  if (data){
+    fetchMeta();
+  }, [props.id])
   return (
-    <div className="App">
-      <Header data={data}/>
-      <Viz data={data}/>
-      <Footer />
-    </div>
+    <ControlPanel props={props} sexMeta={sexMeta} locMeta={locMeta} yearMeta={yearMeta}/>
   );
-  } else {
-    return null;
-  }
 }
+
+export default App;
