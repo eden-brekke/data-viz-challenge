@@ -1,35 +1,60 @@
-import { useCallback, useState } from 'react';
+import Header from './Header'
+import * as api from '../api';
+import { useState } from 'react'
 
-import { SexControl, YearControl }  from './controls';
-
-import './ControlPanel.css';
-
-// This component is responsible for the year sliding selector and the sex selector on the main page.
-// These states could easily be hooked up to a graph to render on the selected year and sex data.
-export default function ControlPanel() {
-  const [sex, setSex] = useState('Females'); // default to females
-  const [year, setYear] = useState(2017); // default to 2017
-
-  // function connected to "onChange" event within the sex selector.
-  const handelSexChange = useCallback(
-    (nextValue) => {
-      setSex(nextValue);
-    },
-    [setSex],
-  );
-
-  // function connected to "onChange" event within the year selector
-  const handelYearChange = useCallback(
-    (nextValue) => {
-      setYear(nextValue);
-    },
-    [setYear],
-  );
+function ControlPanel({sexMeta, locMeta, yearMeta}) {
+  const [data, setData] = useState(['Loading']);
+  
+  async function dataHandler(event){
+    event.preventDefault();
+    let location = event.target.userSelectedLoc.value;
+    let year = event.target.userSelectedYear.value;
+    let sex = event.target.userSelectedSex.value
+    console.log("location", location)
+    const newData = await api.fetchData({
+      // location_id: location,
+      year_id: year,
+      sex_id: sex,
+    });
+    setData(newData);
+    console.log(newData);
+    console.log('just like saying words');
+  }
 
   return (
-    <div className="control-panel">
-      <SexControl value={sex} onChange={handelSexChange} />
-      <YearControl max={2017} min={1990} value={year} onChange={handelYearChange} />
+    <>
+    <div className="App">
+      <form onSubmit={dataHandler}>
+      <div className="control">
+        <span className="control__label">Sex: </span>
+        <select id="userSelectedSex" className="select-sex__options">
+          {sexMeta.map((option) => (
+            <option value={`${option.sex_id}`}>{option.sex_short_name}</option>
+          ))}
+        </select>
+      </div>
+      <div className="control">
+        <span className="control__label">Year: </span>
+        <select id="userSelectedYear" className="select-year__options">
+          {yearMeta.map((option) => (
+            <option value={`${option.year_id}`}>{option.year_name}</option>
+          ))}
+        </select>
+      </div>
+      <div className="control">
+        <span className="control__label">Locations: </span>
+        <select id="userSelectedLoc" className="select-loc__options">
+          {locMeta.map((option) => (
+            <option value={`${option.location_id}`}>{option.location_name}</option>
+          ))}
+        </select>
+      </div>
+      <button type="submit">Hello</button>
+      </form>
     </div>
+    <Header data = {data}/>
+    </>
   );
 }
+
+export default ControlPanel;
