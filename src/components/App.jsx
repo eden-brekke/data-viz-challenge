@@ -1,12 +1,16 @@
 import * as api from '../api';
 import { useEffect, useState } from 'react'
-import ControlPanel from './ControlPanel.jsx';
+import Footer from './buildingblocks/Footer';
+import Main from './buildingblocks/Main';
 
 
 function App(props) {
   const [sexMeta, setSexMeta] = useState(['Loading']);
   const [locMeta, setLocMeta] = useState(['Loading']);
   const [yearMeta, setYearMeta] = useState(['Loading']);
+  const [cite, setCite] = useState(['Loading']);
+  const [view, setView] = useState(true);
+  
   useEffect(() => {
     console.log("hello effect use")
     async function fetchMeta() {
@@ -18,13 +22,18 @@ function App(props) {
       setSexMeta(sexmeta);
       setYearMeta(yearmeta);
       setLocMeta(locmeta);
+      setCite(citation);
       console.log(sexmeta, locmeta, yearmeta);
       console.log('ye be oporate?')
     }
     fetchMeta();
-  }, [props.id])
+  }, [])
+
   return (
-    <ControlPanel props={props} sexMeta={sexMeta} locMeta={locMeta} yearMeta={yearMeta}/>
+    <>
+    <Main sexMeta={sexMeta} locMeta={locMeta} yearMeta={yearMeta} />
+    <Footer cite={cite} />
+    </>
   );
 }
 
