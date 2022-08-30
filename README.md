@@ -1,5 +1,13 @@
 # Data Visualization Coding Challenge - Instructions
 
+## References
+
+[Horizontal Bar Chart](https://observablehq.com/@d3/horizontal-bar-chart?collection=@d3/charts)
+[Vertical Bar Chart](https://observablehq.com/@d3/bar-chart?collection=@d3/charts)
+[Multiseries Line Graph](https://observablehq.com/@d3/multi-line-chart?collection=@d3/charts)
+[General D3 Questions](https://observablehq.com/explore)
+
+
 ## Objective
 Create a data visualization that helps answer the question, **“What population is most affected by opioid use disorders?”**
 
