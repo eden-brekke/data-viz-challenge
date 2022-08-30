@@ -1,18 +1,25 @@
-import Header from './Header'
 import * as api from '../api';
 import { useState } from 'react'
+import HighRates from './HighRatesChart'
+import LowRates from './LowRatesChart'
+import Yearly from './YearlyRatesChart'
 
-function ControlPanel({sexMeta, locMeta, yearMeta}) {
+
+
+
+function ControlPanel({sexMeta, locMeta, yearMeta, chartType}) {
   const [data, setData] = useState(['Loading']);
   
   async function dataHandler(event){
-    event.preventDefault();
-    let location = event.target.userSelectedLoc.value;
-    let year = event.target.userSelectedYear.value;
-    let sex = event.target.userSelectedSex.value
+    event.preventDefault(); 
+    const location = document.getElementById('userSelectedLoc') === null ? [] : document.getElementById('userSelectedLoc').value; 
+    const year = document.getElementById('userSelectedYear') === null ? [] : document.getElementById('userSelectedYear').value;
+    const sex = document.getElementById('userSelectedSex') === null ? [] : document.getElementById('userSelectedSex').value;
     console.log("location", location)
+    console.log('sex', sex)
+    console.log('year', year)
     const newData = await api.fetchData({
-      // location_id: location,
+      location_id: location,
       year_id: year,
       sex_id: sex,
     });
@@ -20,7 +27,8 @@ function ControlPanel({sexMeta, locMeta, yearMeta}) {
     console.log(newData);
     console.log('just like saying words');
   }
-
+  
+if(chartType === 'highrates' || chartType === 'lowrates'){
   return (
     <>
     <div className="App">
@@ -41,6 +49,20 @@ function ControlPanel({sexMeta, locMeta, yearMeta}) {
           ))}
         </select>
       </div>
+      <button type="submit">Hello</button>
+      </form>
+    </div>
+    {chartType === 'highrates' ?<HighRates data={data} /> : <LowRates data={data}/>}
+    
+    {/* <LowRates data={data}/> */}
+    
+    </>
+  );
+}else if(chartType === 'yearly'){
+  return (
+    <>
+    <div className="App">
+      <form onSubmit={dataHandler}>
       <div className="control">
         <span className="control__label">Locations: </span>
         <select id="userSelectedLoc" className="select-loc__options">
@@ -52,9 +74,11 @@ function ControlPanel({sexMeta, locMeta, yearMeta}) {
       <button type="submit">Hello</button>
       </form>
     </div>
-    <Header data = {data}/>
+    <Yearly data={data}/>
     </>
   );
+}
+
 }
 
 export default ControlPanel;
