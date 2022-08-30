@@ -1,0 +1,15 @@
+#footer {
+  background-color: rgb(180,245,130);
+  margin-top: 20px;
+  width:100%;
+  display:flex;
+}
+
+#footlink {
+  color: black;
+  justify-content: right;
+  font-size: large;
+}
+#cite {
+  padding: 10px;
+}
