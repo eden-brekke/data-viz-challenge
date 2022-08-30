@@ -4,10 +4,10 @@
 
 ## References
 
-[Horizontal Bar Chart](https://observablehq.com/@d3/horizontal-bar-chart?collection=@d3/charts)
-[Vertical Bar Chart](https://observablehq.com/@d3/bar-chart?collection=@d3/charts)
-[Multiseries Line Graph](https://observablehq.com/@d3/multi-line-chart?collection=@d3/charts)
-[General D3 Questions](https://observablehq.com/explore)
+[Horizontal Bar Chart](https://observablehq.com/@d3/horizontal-bar-chart?collection=@d3/charts)  
+[Vertical Bar Chart](https://observablehq.com/@d3/bar-chart?collection=@d3/charts)  
+[Multiseries Line Graph](https://observablehq.com/@d3/multi-line-chart?collection=@d3/charts)  
+[General D3 Questions](https://observablehq.com/explore)  
 
 
 ## Objective
