@@ -19,6 +19,7 @@ export default function SexControl({ onChange, value }) {
 
   return (
     // Map through the options array and grab the value from each object within the array, display all values.
+    // Add a submit button to handle state changes
     <div className="control">
       <span className="control__label">Sex</span>
       <div className="selector-sex__options">
@@ -31,7 +32,7 @@ export default function SexControl({ onChange, value }) {
               type="radio"
               value={option.value}
               onChange={handleChange}
-            />
+            /> 
             <label htmlFor={`sex-control-option-${option.value}`}>{option.label}</label>
           </Fragment>
         ))}
