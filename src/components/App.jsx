@@ -9,7 +9,6 @@ function App(props) {
   const [locMeta, setLocMeta] = useState(['Loading']);
   const [yearMeta, setYearMeta] = useState(['Loading']);
   const [cite, setCite] = useState(['Loading']);
-  const [view, setView] = useState(true);
   
   useEffect(() => {
     console.log("hello effect use")

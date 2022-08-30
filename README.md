@@ -1,5 +1,7 @@
 # Data Visualization Coding Challenge - Instructions
 
+[Deployed Site](https://eden-data-viz-challenge.netlify.app/)
+
 ## References
 
 [Horizontal Bar Chart](https://observablehq.com/@d3/horizontal-bar-chart?collection=@d3/charts)
