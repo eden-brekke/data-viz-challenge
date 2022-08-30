@@ -1,6 +1,6 @@
 import './Viz.css';
 import Chart from './Chart.jsx';
-import LineChart from './LineChart.jsx';
+import LineChart from './YearlyRatesChart.jsx';
 import Chart2 from './Chart2.jsx';
 
 export default function Viz({data}) {
