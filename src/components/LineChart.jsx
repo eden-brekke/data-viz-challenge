@@ -159,8 +159,11 @@ function LineChart({data}){
   });
   return(
     <div>
+      <h3>Make Selections to Change the data Graphed(need to add dropdown of locations available</h3>
       <LineControlPanel />
       <svg ref={svgRef}></svg>
+      <p>The Graph above is meant for you to take the time to look at each location and how opioid use disorder has affected that location over the years</p>
+      <p>Fundamental Piece to answering not only "which populations are most impacted" but also have those populations changed over the years.</p>
     </div>
   )
 }

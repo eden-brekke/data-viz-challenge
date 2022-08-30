@@ -32,12 +32,12 @@ export default function Chart2({data}){
     const svg = d3.select(d3Chart.current)
                                     .attr('width', chartwidth + margin.left + margin.right)
                                     .attr('height', chartheight + margin.top + margin.bottom)
-                  
+
     const x = d3.scaleBand()
                             .domain(d3.range(data.length))
                             .range([margin.left, chartwidth - margin.right])
                             .padding(0.4)
-                        
+
     svg.append('g')
             .attr('transform', 'translate(0,'+chartheight+')')
             .call(d3.axisBottom(x).tickFormat(i=>data[i].location_name).tickSizeOuter(0))
@@ -74,9 +74,12 @@ export default function Chart2({data}){
   }
   return (
     <>
+    <h3>Make Selections to Change the data Graphed</h3>
     <ControlPanel />
     <div id="barchart">
       <svg ref={d3Chart}></svg>
+      <p>The Graph above is giving us a good idea of the locations within our data set that are least impacted by opioid use disorders</p>
+      <p>Fundamental Piece to answering "which populations are most impacted"</p>
     </div>
     </>
   )
