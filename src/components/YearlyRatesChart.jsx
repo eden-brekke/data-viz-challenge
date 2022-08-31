@@ -14,11 +14,13 @@ export default function Yearly({ data }) {
   if (data[0] === "Loading") {
     return (
       <>
-        <div class="spinner">
+        <div className="spin-container">
+        <div className="spinner">
           <p>loading...</p>
-          <div class="spinner-area spinner-first"></div>
-          <div class="spinner-area spinner-second"></div>
-          <div class="spinner-area spinner-third"></div>
+          <div className="spinner-area spinner-first"></div>
+          <div className="spinner-area spinner-second"></div>
+          <div className="spinner-area spinner-third"></div>
+        </div>
         </div>
       </>
     );
