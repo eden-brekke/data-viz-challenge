@@ -10,7 +10,6 @@
   justify-content: left;
   color: black;
   font-size: large;
-  position: relative;
   top: 70px;
 }
 
@@ -41,7 +40,6 @@
 .cite-text {
   justify-content: center;
   text-align: center;
-  position: relative;
-  top: 50px;
   padding: 30px;
+  width: 50vw;
 }

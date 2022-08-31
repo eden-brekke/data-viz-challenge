@@ -66,6 +66,7 @@ a {
   padding-right: 40px;
   align-content: space-around;
   font-size: 1.7rem;
+  text-decoration: none;
 }
 
 a:hover {
