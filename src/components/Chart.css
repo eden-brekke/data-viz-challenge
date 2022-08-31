@@ -146,3 +146,66 @@ body {
     transform: rotate(15deg);
   }
 }
+
+.graph-title {
+  text-align: center;
+  font-size: 1.4em;
+}
+.graph-div {
+  display:flex;
+  justify-content: center;
+  margin:10px;
+  padding:20px;
+}
+svg{
+  display:flex;
+  justify-content: center;
+}
+p{
+  text-align: center;
+  line-height: 2em;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.mean-def {
+  font-size: small;
+  font-style: italic;
+}
+
+.males{
+  height: 15px;
+  width: 15px;
+  border: 1;
+  border-radius: 100%;
+  background-color: #6489B2;
+  margin: 2px;
+}
+.females{
+  height: 15px;
+  width: 15px;
+  border: 1;
+  border-radius: 100%;
+  background-color: #F28E2C;
+  margin: 2px;
+}
+.both{
+  height: 15px;
+  width: 15px;
+  border: 1;
+  border-radius: 100%;
+  background-color: #E15759;
+  margin: 2px;
+}
+.legend{
+  display:flex;
+  flex-direction: column;
+  padding-right: 60px;
+}
+
+.legend-title{
+  font-style: italic;
+  font-size: medium;
+  margin: 3px;
+  font-weight: bold;
+}
