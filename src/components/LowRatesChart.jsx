@@ -35,7 +35,7 @@ export default function Chart({ data }) {
         <div className='graph-div'>
         <svg ref={chart}></svg>
         </div>
-        <p className="mean-def">Mean: This is the mean death rate (number of deaths per 100,000 people) due to opioid use disorders for a given location, sex, and year.</p>
+        <p className="mean-def"> Value Definition of Mean: This is the mean death rate (number of deaths per 100,000 people) due to opioid use disorders for a given location, sex, and year.</p>
         <p>In the Above Graph the X Axis depicts the Location correlating to the Y axis in which the mean death rate is given.<br></br>Graphs such as this give us a good idea of which geographical locations are most and least affected by Opioid use Disorder.</p>
       </>
     );
