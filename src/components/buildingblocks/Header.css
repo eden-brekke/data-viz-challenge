@@ -1,16 +1,37 @@
+.main-full {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
 h1 {
-  background-color: rgb(180,245,130);
+  background-color: rgb(180, 245, 130);
   padding: 0;
-  margin:0;
+  margin: 0;
   text-align: center;
 }
 
 h2 {
   padding: 0;
-  margin:0;
+  padding-bottom: 5px;
+  margin: 0;
   text-align: center;
-  background-color: rgb(180,245,130);
+  background-color: rgb(180, 245, 130);
 }
+
+.nav-bar {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 5px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 nav {
   padding-top: 0;
   margin-top: 0;
@@ -18,13 +39,13 @@ nav {
   display: flex;
   align-items: center;
   align-content: center;
+  overflow: auto;
 }
 
 #nav {
-  display:flex;
+  display: flex;
   justify-content: center;
-  padding: 5px;
-  background-color: rgb(73,157,87);
+  background-color: rgb(39, 174, 96);
   border-top: 5px;
   border-color: white;
 }
@@ -38,6 +59,18 @@ a {
   row-gap: 10px;
   column-gap: 20px;
   color: white;
-  padding: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
   align-content: space-around;
+  font-size: 1.7rem;
+}
+
+a:hover {
+  color: black;
+}
+
+a:active {
+  color: rgb(180, 245, 130);
 }
