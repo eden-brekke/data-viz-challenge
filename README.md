@@ -4,7 +4,8 @@
 
 ## The project in my own words
 
-The objective of this project is to help answer the question **“What population is most affected by opioid use disorders?”**
+The objective of this project is to help answer the question **“What population is most affected by opioid use disorders?”**  
+
 Important aspects for me to hit are:  
 
 - **Understanding of code and adherence to best practices:** Is the code structured in a way that makes it easy to read and maintain? This is your opportunity to display your understanding and skill with the JavaScript language and with program design.
@@ -13,6 +14,7 @@ Important aspects for me to hit are:
   - The way I interpret this is that I need to choose the correct graph formats as well as correct axes to show.
   - I chose to show two bar charts, and two line charts to tell my story, as well as giving my observations and analysis of each chart.
 - **Visual appeal:** Do the visual elements add to the story or detract from it?
+  - I chose to learn how to use the D3 visualization library in order to tackle this. I chose D3 because it appears to be a very powerful tool, that allows for infinite customization. The caveat to that is, you have to build the chart from the ground up. I thought that that suited the notion of working towards "Not detracting" from the data!
   - Make the app pretty! But Also make sure that whatever you do to make it pretty, the chart and the data are the main focus. Don't add styling that will distract.
 
 ## References
@@ -25,9 +27,12 @@ Important aspects for me to hit are:
 [Rainbow Button](https://codepen.io/astitva2009/embed/ExQeNxb?height=441&theme-id=dark&default-tab=result&slug-hash=ExQeNxb&user=astitva2009&name=cp_embed_51#css-box)  
 [Rotate Axis Labels](https://stackoverflow.com/questions/20947488/d3-grouped-bar-chart-how-to-rotate-the-text-of-x-axis-ticks)  
 
+## Assignment as Described by IHME
 
+Below are the specifications that were laid out for the application by GIG at IHME
 
 ## Objective
+
 Create a data visualization that helps answer the question, **“What population is most affected by opioid use disorders?”**
 
 You can choose to either start from scratch or build off the provided starter project in this repo.  
@@ -45,6 +50,7 @@ You may use any libraries or frameworks you find helpful. Here are a few suggest
 - [Highcharts](https://github.com/highcharts/highcharts)
 
 ## Data API
+
 For your convenience, we have created a REST API to fetch Opioid Use Death rates (Deaths per 100,000 people) for use in this data visualization challenge, docs can be found [here](https://vizhub.healthdata.org/data-viz-challenge-api/). A csv with all available data can also be found in the `data` directory. Client-side functions for interacting with the API have been created in `src/api.js`.
 
 ## What we're looking for
@@ -60,6 +66,7 @@ For your convenience, we have created a REST API to fetch Opioid Use Death rates
 1. Send us links to both the source code repository and the live deployment.
 
 ## Software requirements
+
 For the provided starter project, **you’ll need to have Node 14.0.0 or later version on your local development machine**. 
 We recommend using the latest LTS version. You can use [nvm](https://github.com/creationix/nvm#installation) (macOS/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows) to switch Node versions between different projects.
 
