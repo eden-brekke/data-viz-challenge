@@ -6,6 +6,8 @@
 .header {
   top:0;
   margin-bottom: 20px;
+  border: 1px solid rgb(39, 174, 96);
+  border-radius: 8px;
 }
 
 h1 {
@@ -31,6 +33,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 
 nav {
@@ -41,12 +44,14 @@ nav {
   align-items: center;
   align-content: center;
   overflow: auto;
+  border-bottom:2px solid rgb(180, 245, 130);
+  font-weight: bold;
 }
 
 #nav {
   display: flex;
   justify-content: center;
-  background-color: rgb(39, 174, 96);
+  /* background-color: rgb(39, 174, 96); */
   border-top: 5px;
   border-color: white;
 }
@@ -59,7 +64,7 @@ a {
   gap: 10px 20px;
   row-gap: 10px;
   column-gap: 20px;
-  color: white;
+  color: black;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 40px;
@@ -70,7 +75,7 @@ a {
 }
 
 a:hover {
-  color: black;
+  color: rgb(39, 174, 96);
 }
 
 a:active {

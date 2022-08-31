@@ -3,6 +3,8 @@
   margin-top: 70px;
   display: flex;
   justify-content: space-between;
+  border: 1px solid rgb(39, 174, 96);
+  border-radius: 8px;
 }
 
 .dev-link {
@@ -27,20 +29,8 @@
   color: #fff;
 }
 
-.citation-info {
-  display: flex;
-
-}
-
-.cite-links {
-  flex-direction: row;
-}
-
 .cite-text {
   justify-content: center;
-  text-align: center;
-  padding: 30px;
-  width: 50vw;
 }
 
 p{
