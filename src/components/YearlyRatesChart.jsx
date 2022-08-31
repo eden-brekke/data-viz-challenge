@@ -18,7 +18,7 @@ export default function Yearly({ data }) {
       <>
         <div className="spin-container">
         <div className="spinner">
-          <p>loading...</p>
+          <p>Waiting for Input...</p>
           <div className="spinner-area spinner-first"></div>
           <div className="spinner-area spinner-second"></div>
           <div className="spinner-area spinner-third"></div>

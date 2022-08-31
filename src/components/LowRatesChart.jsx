@@ -14,13 +14,13 @@ export default function Chart({ data }) {
     width: 900,
     color: "#BBDEF9"
   });
-  
+
   if (data[0] === "Loading") {
     return (
       <>
         <div className="spin-container">
         <div className="spinner">
-          <p>loading...</p>
+          <p>Waiting for Input...</p>
           <div className="spinner-area spinner-first"></div>
           <div className="spinner-area spinner-second"></div>
           <div className="spinner-area spinner-third"></div>
