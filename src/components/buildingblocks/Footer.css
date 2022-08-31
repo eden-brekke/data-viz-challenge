@@ -42,3 +42,18 @@
   padding: 30px;
   width: 50vw;
 }
+
+p{
+  line-height: 2em;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.landing-title {
+  text-align: center;
+  font-size: 1.7em;
+}
+
+.ending-statement {
+  text-align: center;
+}
