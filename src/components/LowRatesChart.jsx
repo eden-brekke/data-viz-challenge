@@ -16,11 +16,11 @@ export default function Chart({ data }) {
     return (
       <>
         <div className="spin-container">
-        <div class="spinner">
+        <div className="spinner">
           <p>loading...</p>
-          <div class="spinner-area spinner-first"></div>
-          <div class="spinner-area spinner-second"></div>
-          <div class="spinner-area spinner-third"></div>
+          <div className="spinner-area spinner-first"></div>
+          <div className="spinner-area spinner-second"></div>
+          <div className="spinner-area spinner-third"></div>
         </div>
         </div>
       </>
