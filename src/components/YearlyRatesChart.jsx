@@ -3,6 +3,8 @@ import './Chart.css';
 
 export default function Yearly({ data }) {
   data.sort((a, b) => b.year_id - a.year_id);
+  
+  // Function
   const chart = LineChart(data, {
     x: d => d.year_name,
     y: d => d.mean,
@@ -10,6 +12,7 @@ export default function Yearly({ data }) {
     yLabel: "Mean Rate of Death",
     width: 900,
   })
+
   if (data[0] === "Loading") {
     return (
       <>

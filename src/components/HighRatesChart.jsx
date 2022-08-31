@@ -4,6 +4,8 @@ import './Chart.css';
 export default function Chart({ data }) {
   data.sort((a, b) => b.mean - a.mean);
   const slicedData = data.slice(0, 20)
+  
+  // Function
   const chart = BarChart(slicedData, {
     y: d => d.mean,
     x: d => d.location_name,
@@ -12,6 +14,7 @@ export default function Chart({ data }) {
     width: 900,
     color: "#BBDEF9"
   });
+  
   if (data[0] === "Loading") {
     return (
       <>

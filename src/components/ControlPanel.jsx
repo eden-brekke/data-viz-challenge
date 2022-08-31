@@ -8,6 +8,7 @@ import './ControlPanel.css'
 function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
   const [data, setData] = useState(['Loading']);
 
+  // Function
   async function dataHandler(event) {
     event.preventDefault();
     const location = document.getElementById('userSelectedLoc') === null ? [] : event.target.userSelectedLoc.value;

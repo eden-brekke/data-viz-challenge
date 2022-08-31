@@ -10,6 +10,7 @@ function App() {
   const [yearMeta, setYearMeta] = useState(['Loading']);
   const [cite, setCite] = useState(['Loading']);
   
+  // Function
   useEffect(() => {
     async function fetchMeta() {
       const sexmeta = await api.fetchSexMetadata();
