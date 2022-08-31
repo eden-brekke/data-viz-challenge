@@ -10,6 +10,8 @@
 [General D3 Questions](https://observablehq.com/explore)  
 [Loading Animation](https://codepen.io/krysmalskipl/pen/xxWNyaq)  
 [Rainbow Button](https://codepen.io/astitva2009/embed/ExQeNxb?height=441&theme-id=dark&default-tab=result&slug-hash=ExQeNxb&user=astitva2009&name=cp_embed_51#css-box)  
+[Rotate Axis Labels](https://stackoverflow.com/questions/20947488/d3-grouped-bar-chart-how-to-rotate-the-text-of-x-axis-ticks)  
+
 
 
 ## Objective
