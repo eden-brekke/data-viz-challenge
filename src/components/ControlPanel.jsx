@@ -66,7 +66,7 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
     return (
       <>
         <div className="App">
-          <form onSubmit={dataHandler}>
+          <form className="form" onSubmit={dataHandler}>
             <div className="control">
               <span className="control__label">Locations: </span>
               <select id="userSelectedLoc" className="select-loc__options">
