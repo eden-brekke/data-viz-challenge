@@ -13,9 +13,12 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
 
   async function dataHandler(event) {
     event.preventDefault();
-    const location = document.getElementById('userSelectedLoc') === null ? [] : document.getElementById('userSelectedLoc').value;
-    const year = document.getElementById('userSelectedYear') === null ? [] : document.getElementById('userSelectedYear').value;
-    const sex = document.getElementById('userSelectedSex') === null ? [] : document.getElementById('userSelectedSex').value;
+    // const location = document.getElementById('userSelectedLoc') === null ? [] : document.getElementById('userSelectedLoc').value;
+    // const year = document.getElementById('userSelectedYear') === null ? [] : document.getElementById('userSelectedYear').value;
+    // const sex = document.getElementById('userSelectedSex') === null ? [] : document.getElementById('userSelectedSex').value;
+    const location = document.getElementById('userSelectedLoc') === null ? [] : event.target.userSelectedLoc.value;
+    const year = document.getElementById('userSelectedYear') === null ? [] : event.target.userSelectedYear.value;
+    const sex = document.getElementById('userSelectedSex') === null ? [] : event.target.userSelectedSex.value;
     console.log("location", location)
     console.log('sex', sex)
     console.log('year', year)
@@ -26,14 +29,13 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
     });
     setData(newData);
     console.log(newData);
-    console.log('just like saying words');
   }
 
   if (chartType === 'highrates' || chartType === 'lowrates') {
     return (
       <>
         <p className="control-panel-text">Here you can generate data for mortality rates of Opioid Use Disease. <br></br> Choose a Sex and a Year to narrow the scope of the data. <br></br>
-          Navigate Between "Hightest" and "Lowest Mortality Rates by Year" to toggle which limit of the graph you are accessing.
+          Navigate Between "Hightest" and "Lowest" Mortality Rates by Year to toggle which limit of the graph you are accessing.
         </p>
         <div className="App">
           <form className='form' onSubmit={dataHandler}>
@@ -65,10 +67,12 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
   } else if (chartType === 'yearly') {
     return (
       <>
+        <p className="control-panel-text">Here you can generate data for the mortality rates of through the years due to Opioid Use Disease. <br></br> Choose a Location to narrow the scope of the data.
+        </p>
         <div className="App">
           <form className="form" onSubmit={dataHandler}>
             <div className="control">
-              <span className="control__label">Locations: </span>
+              <span className="control__label">Location: </span>
               <select id="userSelectedLoc" className="select-loc__options">
                 {locMeta.map((option) => (
                   <option value={`${option.location_id}`}>{option.location_name}</option>
