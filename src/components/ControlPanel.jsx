@@ -13,16 +13,12 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
     const location = document.getElementById('userSelectedLoc') === null ? [] : event.target.userSelectedLoc.value;
     const year = document.getElementById('userSelectedYear') === null ? [] : event.target.userSelectedYear.value;
     const sex = document.getElementById('userSelectedSex') === null ? [] : event.target.userSelectedSex.value;
-    console.log("location", location)
-    console.log('sex', sex)
-    console.log('year', year)
     const newData = await api.fetchData({
       location_id: location,
       year_id: year,
       sex_id: sex,
     });
     setData(newData);
-    console.log(newData);
   }
 
   if (chartType === 'highrates' || chartType === 'lowrates') {

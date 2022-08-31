@@ -11,9 +11,7 @@ function App() {
   const [cite, setCite] = useState(['Loading']);
   
   useEffect(() => {
-    console.log("hello effect use")
     async function fetchMeta() {
-      console.log("beginning of fetch")
       const sexmeta = await api.fetchSexMetadata();
       const locmeta = await api.fetchLocationMetadata();
       const yearmeta = await api.fetchYearMetadata();
@@ -22,8 +20,6 @@ function App() {
       setYearMeta(yearmeta);
       setLocMeta(locmeta);
       setCite(citation);
-      console.log(sexmeta, locmeta, yearmeta);
-      console.log('ye be oporate?')
     }
     fetchMeta();
   }, [])
