@@ -3,6 +3,7 @@ import { useState } from 'react'
 import HighRates from './HighRatesChart'
 import LowRates from './LowRatesChart'
 import Yearly from './YearlyRatesChart'
+import AllYearly from './AllYearlyRatesChart'
 import './ControlPanel.css'
 
 function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
@@ -73,6 +74,27 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
           </form>
         </div>
         <Yearly data={data} />
+      </>
+    );
+  }else if (chartType === 'allyearly') {
+    return (
+      <>
+        <p className="control-panel-text">Here you can generate data for the mortality rates of through the years due to Opioid Use Disease. <br></br> Choose a Sex to narrow the scope of the data.
+        </p>
+        <div className="App">
+          <form className="form" onSubmit={dataHandler}>
+          <div className="control">
+              <span className="control__label">Sex: </span>
+              <select id="userSelectedSex" className="select-sex__options">
+                {sexMeta.map((option) => (
+                  <option value={`${option.sex_id}`} key={option.sex_id}>{option.sex_short_name}</option>
+                ))}
+              </select>
+            </div>
+            <button className="rainbow-button" type="submit">Click to Generate Data</button>
+          </form>
+        </div>
+        <AllYearly data={data} />
       </>
     );
   }
