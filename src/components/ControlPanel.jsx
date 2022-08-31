@@ -22,6 +22,7 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
     setData(newData);
   }
 
+
   if (chartType === 'highrates' || chartType === 'lowrates') {
     return (
       <>
@@ -34,7 +35,7 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
               <span className="control__label">Sex: </span>
               <select id="userSelectedSex" className="select-sex__options">
                 {sexMeta.map((option) => (
-                  <option value={`${option.sex_id}`}>{option.sex_short_name}</option>
+                  <option value={`${option.sex_id}`} key={option.sex_id}>{option.sex_short_name}</option>
                 ))}
               </select>
             </div>
@@ -42,17 +43,18 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
               <span className="control__label">Year: </span>
               <select id="userSelectedYear" className="select-year__options">
                 {yearMeta.map((option) => (
-                  <option value={`${option.year_id}`}>{option.year_name}</option>
+                  <option value={`${option.year_id}`} key={option.year_id}>{option.year_name}</option>
                 ))}
               </select>
             </div>
-            <button class="rainbow-button" type="submit">Click to Generate Data</button>
+            <button className="rainbow-button" type="submit">Click to Generate Data</button>
           </form>
         </div>
         {chartType === 'highrates' ? <HighRates data={data} /> : <LowRates data={data} />}
       </>
     );
   } else if (chartType === 'yearly') {
+    const sortLoc = locMeta.sort((a,b) => a.location_name.localeCompare(b.location_name));
     return (
       <>
         <p className="control-panel-text">Here you can generate data for the mortality rates of through the years due to Opioid Use Disease. <br></br> Choose a Location to narrow the scope of the data.
@@ -62,12 +64,12 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
             <div className="control">
               <span className="control__label">Location: </span>
               <select id="userSelectedLoc" className="select-loc__options">
-                {locMeta.map((option) => (
-                  <option value={`${option.location_id}`}>{option.location_name}</option>
+                {sortLoc.map((option) => (
+                  <option value={`${option.location_id}`} key={option.location_id}>{option.location_name}</option>
                 ))}
               </select>
             </div>
-            <button class="rainbow-button" type="submit">Click to Generate Data</button>
+            <button className="rainbow-button" type="submit">Click to Generate Data</button>
           </form>
         </div>
         <Yearly data={data} />
