@@ -4,7 +4,7 @@ import './Chart.css';
 export default function Yearly({ data }) {
   data.sort((a, b) => b.year_id - a.year_id);
   
-  // Function
+  // Linked up with the d3 multi series line chart code, this code passes in parameters that we want for this graph to the function in that file which then returns the rendered graph
   const chart = LineChart(data, {
     x: d => d.year_name,
     y: d => d.mean,

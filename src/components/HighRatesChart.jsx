@@ -5,7 +5,7 @@ export default function Chart({ data }) {
   data.sort((a, b) => b.mean - a.mean);
   const slicedData = data.slice(0, 20)
   
-  // Function
+  // Linked up with the d3 vertical bar chart code, this code passes in parameters that we want for this graph to the function in that file which then returns the rendered graph
   const chart = BarChart(slicedData, {
     y: d => d.mean,
     x: d => d.location_name,

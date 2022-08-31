@@ -8,19 +8,17 @@ function App() {
   const [sexMeta, setSexMeta] = useState(['Loading']);
   const [locMeta, setLocMeta] = useState(['Loading']);
   const [yearMeta, setYearMeta] = useState(['Loading']);
-  const [cite, setCite] = useState(['Loading']);
   
-  // Function
+  // Use Effects happen on page refresh and require a dependency array at the end to prevent loops. 
+  // This functions purpose is to grab the metadata from the API, and set each individual metadata to their own states. 
   useEffect(() => {
     async function fetchMeta() {
       const sexmeta = await api.fetchSexMetadata();
       const locmeta = await api.fetchLocationMetadata();
       const yearmeta = await api.fetchYearMetadata();
-      const citation = await api.fetchCitation();
       setSexMeta(sexmeta);
       setYearMeta(yearmeta);
       setLocMeta(locmeta);
-      setCite(citation);
     }
     fetchMeta();
   }, [])
@@ -29,7 +27,7 @@ function App() {
   return (
     <>
     <Main sexMeta={sexMeta} locMeta={locMeta} yearMeta={yearMeta} />
-    <Footer cite={cite} />
+    <Footer />
     </>
   );
 }
