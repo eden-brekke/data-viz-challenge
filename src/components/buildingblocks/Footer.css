@@ -1,15 +1,48 @@
 #footer {
-  background-color: rgb(180,245,130);
-  margin-top: 20px;
-  width:100%;
-  display:flex;
+  background-color: rgb(180, 245, 130);
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
 }
 
-#footlink {
+.dev-link {
+  justify-content: left;
   color: black;
+  font-size: large;
+  position: relative;
+  top: 70px;
+}
+
+.dev-link:hover {
+  color: #fff;
+}
+
+.footer-link {
+  color: black;
+  flex-direction: row;
   justify-content: right;
   font-size: large;
 }
-#cite {
-  padding: 10px;
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.citation-info {
+  display: flex;
+
+}
+
+.cite-links {
+  flex-direction: row;
+}
+
+.cite-text {
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  top: 50px;
+  padding: 30px;
 }
