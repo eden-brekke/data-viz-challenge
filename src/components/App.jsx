@@ -28,6 +28,7 @@ function App(props) {
     fetchMeta();
   }, [])
 
+  
   return (
     <>
     <Main sexMeta={sexMeta} locMeta={locMeta} yearMeta={yearMeta} />
