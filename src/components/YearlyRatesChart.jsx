@@ -39,8 +39,11 @@ export default function Yearly({ data }) {
           </div>
         <svg ref={chart}></svg>
         </div>
-        <p className="mean-def">Mean: This is the mean death rate (number of deaths per 100,000 people) due to opioid use disorders for a given location, sex, and year.</p>
-        <p>In the above graph we see a selected Location and it's mean death rate through the years of 1990 to 2017.<br></br>Graphs such as this give us a good idea of not only which biological sex are most and least affected by Opioid use Disorder, but also how the affect of Opioid use disorder fluctuates throughout the years.</p>
+        <p className="mean-def">Value Definition of Mean: This is the mean death rate (number of deaths per 100,000 people) due to opioid use disorders for a given location, sex, and year.</p>
+        <p>In the above graph we see a selected Location and it's mean death rate through the years of 1990 to 2017.</p>
+        <div className='analysis'>
+        <p></p>
+        </div>
       </>
     );
   }
