@@ -22,8 +22,8 @@
   flex: 1 1 auto;
   align-items: center;
   margin: 0.5em;
-  overflow: auto;
   width: 350px;
+  justify-content: space-around;
   margin-left: 35px;
   background: url('../../assets/dropdownarrow.png') no-repeat #fff 319 2px;
 }
@@ -52,6 +52,7 @@
   border: 0;
   background: transparent;
   height: 32px;
+  margin-right: 20vw;
   border: 1px solid #d3d3d3;
   width: 400px;
   font-size: larger;
