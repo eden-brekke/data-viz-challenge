@@ -22,7 +22,7 @@
   flex: 1 1 auto;
   align-items: center;
   margin: 0.5em;
-  overflow: hidden;
+  overflow: auto;
   width: 350px;
   margin-left: 35px;
   background: url('../../assets/dropdownarrow.png') no-repeat #fff 319 2px;
