@@ -1,6 +1,19 @@
 # Data Visualization Coding Challenge - Instructions
 
-[Deployed Site](https://eden-data-viz-challenge.netlify.app/)
+[Netlify Deployed Site](https://eden-data-viz-challenge.netlify.app/)
+
+## The project in my own words
+
+The objective of this project is to help answer the question **“What population is most affected by opioid use disorders?”**
+Important aspects for me to hit are:  
+
+- **Understanding of code and adherence to best practices:** Is the code structured in a way that makes it easy to read and maintain? This is your opportunity to display your understanding and skill with the JavaScript language and with program design.
+  - The way that I understand this is that I need to write clean, readable and **reusable** code. Code that someone can come in, read it, know what's going on and then scale up the app as needed.
+- **Visual understanding:** Is the data being presented in a way that is visually meaningful? Does it answer the question posed above?
+  - The way I interpret this is that I need to choose the correct graph formats as well as correct axes to show.
+  - I chose to show two bar charts, and two line charts to tell my story, as well as giving my observations and analysis of each chart.
+- **Visual appeal:** Do the visual elements add to the story or detract from it?
+  - Make the app pretty! But Also make sure that whatever you do to make it pretty, the chart and the data are the main focus. Don't add styling that will distract.
 
 ## References
 
@@ -44,7 +57,7 @@ For your convenience, we have created a REST API to fetch Opioid Use Death rates
 
 1. Make the source code available on GitHub.
 1. Host the final visualization on [GitHub Pages](https://pages.github.com/), [Heroku](https://www.heroku.com/), [CodeSandbox](https://codesandbox.io/), or any other free hosting service.
-1. Send us links to both the source code repository and the live deployment.   
+1. Send us links to both the source code repository and the live deployment.
 
 ## Software requirements
 For the provided starter project, **you’ll need to have Node 14.0.0 or later version on your local development machine**. 
