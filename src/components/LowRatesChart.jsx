@@ -1,4 +1,3 @@
-import './Chart.css';
 import BarChart from './charts/vertical-bar-chart';
 import './Chart.css';
 
@@ -16,11 +15,13 @@ export default function Chart({ data }) {
   if (data[0] === "Loading") {
     return (
       <>
+        <div className="spin-container">
         <div class="spinner">
           <p>loading...</p>
           <div class="spinner-area spinner-first"></div>
           <div class="spinner-area spinner-second"></div>
           <div class="spinner-area spinner-third"></div>
+        </div>
         </div>
       </>
     );
