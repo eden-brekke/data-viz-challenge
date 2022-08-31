@@ -1,6 +1,7 @@
 import * as d3 from 'd3';
 import {useRef} from 'react';
 
+// Most Code Pulled from d3 docs at https://observablehq.com/@d3/horizontal-bar-chart?collection=@d3/charts
 export default function BarChart(data, {
   x = d => d, // given d in data, returns the (quantitative) x-value
   y = (d, i) => i, // given d in data, returns the (ordinal) y-value

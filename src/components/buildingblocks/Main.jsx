@@ -3,7 +3,7 @@ import Landing from './Landing.jsx';
 import ControlPanel from '../ControlPanel';
 import './Header.css'
 
-export default function Header({ data, sexMeta, locMeta, yearMeta }) {
+export default function Main({sexMeta, locMeta, yearMeta }) {
 
   return (
     <>

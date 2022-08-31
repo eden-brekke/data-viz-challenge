@@ -1,6 +1,7 @@
 import * as d3 from 'd3';
 import {useRef} from 'react';
 
+// Most Code Pulled from d3 docs at https://observablehq.com/@d3/bar-chart?collection=@d3/charts
 export default function BarChart(data, {
   x = (d, i) => i, // given d in data, returns the (ordinal) x-value
   y = d => d, // given d in data, returns the (quantitative) y-value
@@ -51,8 +52,8 @@ export default function BarChart(data, {
   
   // set chart to useRef so we can find it.
   const chart = useRef();
-  // empty chart
   const svg = d3.select(chart.current);
+  // empty chart
   svg.html('');
   svg.attr("width", width)
       .attr("height", height)

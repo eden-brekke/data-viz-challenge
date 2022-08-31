@@ -4,7 +4,7 @@ import Footer from './buildingblocks/Footer';
 import Main from './buildingblocks/Main';
 
 
-function App(props) {
+function App() {
   const [sexMeta, setSexMeta] = useState(['Loading']);
   const [locMeta, setLocMeta] = useState(['Loading']);
   const [yearMeta, setYearMeta] = useState(['Loading']);

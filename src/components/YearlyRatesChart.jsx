@@ -1,6 +1,5 @@
 import LineChart from './charts/multiseries-line-chart'
 import './Chart.css';
-import * as d3 from 'd3';
 
 export default function Yearly({ data }) {
   data.sort((a, b) => b.year_id - a.year_id);
@@ -10,18 +9,7 @@ export default function Yearly({ data }) {
     z: d => d.sex_name,
     yLabel: "Mean Rate of Death",
     width: 900,
-    // color: ["#EAC4D5", "#BBDEF9", "#a1ef7a"],
   })
-  // let parser = d3.timeParse("%Y-%m-%d")
-  // const chart = LineChart(data, {
-  //   x: (d) => d.year_id,
-  //   y: (d) => d.mean,
-  //   z: (d) => d.sex_name,
-  //   yLabel: "Mean deaths per 100,000",
-  //   width: 900,
-  //   height: 700,
-  // })
-  console.log('line chart data ', data);
   if (data[0] === "Loading") {
     return (
       <>

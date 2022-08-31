@@ -5,17 +5,11 @@ import LowRates from './LowRatesChart'
 import Yearly from './YearlyRatesChart'
 import './ControlPanel.css'
 
-
-
-
 function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
   const [data, setData] = useState(['Loading']);
 
   async function dataHandler(event) {
     event.preventDefault();
-    // const location = document.getElementById('userSelectedLoc') === null ? [] : document.getElementById('userSelectedLoc').value;
-    // const year = document.getElementById('userSelectedYear') === null ? [] : document.getElementById('userSelectedYear').value;
-    // const sex = document.getElementById('userSelectedSex') === null ? [] : document.getElementById('userSelectedSex').value;
     const location = document.getElementById('userSelectedLoc') === null ? [] : event.target.userSelectedLoc.value;
     const year = document.getElementById('userSelectedYear') === null ? [] : event.target.userSelectedYear.value;
     const sex = document.getElementById('userSelectedSex') === null ? [] : event.target.userSelectedSex.value;
@@ -59,9 +53,6 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
           </form>
         </div>
         {chartType === 'highrates' ? <HighRates data={data} /> : <LowRates data={data} />}
-
-        {/* <LowRates data={data}/> */}
-
       </>
     );
   } else if (chartType === 'yearly') {
@@ -86,7 +77,6 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
       </>
     );
   }
-
 }
 
 export default ControlPanel;
