@@ -48,7 +48,7 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
                 ))}
               </select>
             </div>
-            <button className="rainbow-button" type="submit">Click to Generate Data</button>
+            <button className="rainbow-button" type="submit">Click to Generate Data (click x2)</button>
           </form>
         </div>
         {chartType === 'highrates' ? <HighRates data={data} /> : <LowRates data={data} />}
@@ -70,7 +70,7 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
                 ))}
               </select>
             </div>
-            <button className="rainbow-button" type="submit">Click to Generate Data</button>
+            <button className="rainbow-button" type="submit">Click to Generate Data (click x2)</button>
           </form>
         </div>
         <Yearly data={data} />
@@ -91,7 +91,7 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
                 ))}
               </select>
             </div>
-            <button className="rainbow-button" type="submit">Click to Generate Data</button>
+            <button className="rainbow-button" type="submit">Click to Generate Data (click x2)</button>
           </form>
         </div>
         <AllYearly data={data} />
