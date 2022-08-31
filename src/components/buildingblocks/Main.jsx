@@ -12,7 +12,7 @@ export default function Header({ data, sexMeta, locMeta, yearMeta }) {
           <div>
             <h1>Opioid Use Disorder</h1>
           </div>
-          <div>
+          <div className="header-lower">
             <h2>Data Visualization</h2>
           </div>
         </div>
