@@ -8,7 +8,8 @@
 [Vertical Bar Chart](https://observablehq.com/@d3/bar-chart?collection=@d3/charts)  
 [Multiseries Line Graph](https://observablehq.com/@d3/multi-line-chart?collection=@d3/charts)  
 [General D3 Questions](https://observablehq.com/explore)  
-[Loading Animation](https://codepen.io/krysmalskipl/pen/xxWNyaq)
+[Loading Animation](https://codepen.io/krysmalskipl/pen/xxWNyaq)  
+[Rainbow Button](https://codepen.io/astitva2009/embed/ExQeNxb?height=441&theme-id=dark&default-tab=result&slug-hash=ExQeNxb&user=astitva2009&name=cp_embed_51#css-box)  
 
 
 ## Objective
