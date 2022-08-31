@@ -23,14 +23,15 @@ export default function Main({sexMeta, locMeta, yearMeta }) {
                 <Link to="/">Home</Link>
                 <Link to="/highrates">Highest Mortality Rates by Year</Link>
                 <Link to="/lowrates">Lowest Mortality Rates by Year</Link>
-                <Link to="/yearlyrates">Yearly Death Rates by Location</Link>
+                <Link to="/yearlyrates">Mortality Rates Over the Years Location</Link>
+                <Link to="/allyearlyrates">All Mortality Rates Over the Years</Link>
               </nav>
             </div>
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="/highrates" element={<ControlPanel sexMeta={sexMeta} yearMeta={yearMeta} chartType="highrates" />} />
               <Route path="/lowrates" element={<ControlPanel sexMeta={sexMeta} yearMeta={yearMeta} chartType="lowrates" />} />
-              <Route path="/yearlyrates" element={<ControlPanel locMeta={locMeta} chartType="yearly" />} />
+              <Route path="/yearlyrates" element={<ControlPanel locMeta={locMeta} chartType="yearly" />} />              <Route path="/allyearlyrates" element={<ControlPanel sexMeta={sexMeta} yearMeta={yearMeta} locMeta={locMeta} chartType="allyearly" />} />
             </Routes>
           </Router>
         </div>
