@@ -13,7 +13,7 @@
 
 :root {
   /* 	Size is a variable for both - height and width dimensions of the circle  */
-  --size: 300px;
+  --size: 250px;
   /* 	First Color Value */
   --clrFirstSpin: rgb(3, 130, 20);
   /* 	Second Color Value */
@@ -29,13 +29,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   margin: 0;
   font-family: 'Verdana', sans-serif;
 }
 
 .spinner {
-  margin-top: 100px;
+  margin-top: 120px;
+  margin-left: 25vw;
+  margin-bottom:20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,6 +117,8 @@ body {
   top: -85px;
   right: -40px;
   background: white;
+  border: 1px;
+  border-radius: 10px;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 42% 75%, 22% 100%, 22% 75%, 0% 75%);
   /* 	animation: displayMessage 2s linear 3s; */
   animation-name: displayMessage;
