@@ -9,8 +9,8 @@ export default function Chart({ data }) {
     x: d => d.location_name,
     yFormat: "",
     yLabel: "Mean",
-    width: 800,
-    color: "green"
+    width: 900,
+    color: "#BBDEF9"
   });
   if (data[0] === "Loading") {
     return (
@@ -28,8 +28,10 @@ export default function Chart({ data }) {
   } else {
     return (
       <>
-        <h3 className="graph title">Top Twenty Locations with the Highest Mortality Rates within a Year</h3>
+        <h3 className="graph-title">Top Twenty Locations with the Highest Mortality Rates within a Year</h3>
+        <div className='graph-div'>
         <svg ref={chart}></svg>
+        </div>
         <p className="mean-def">Mean: This is the mean death rate (number of deaths per 100,000 people) due to opioid use disorders for a given location, sex, and year.</p>
         <p>In the Above Graph the X Axis depicts the Location correlating to the Y axis in which the mean death rate is given.<br></br>Graphs such as this give us a good idea of which geographical locations are most and least affected by Opioid use Disorder.</p>
       </>
