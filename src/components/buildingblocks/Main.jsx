@@ -23,8 +23,8 @@ export default function Main({sexMeta, locMeta, yearMeta }) {
                 <Link to="/">Home</Link>
                 <Link to="/highrates">Highest Mortality Rates by Year</Link>
                 <Link to="/lowrates">Lowest Mortality Rates by Year</Link>
-                <Link to="/yearlyrates">Mortality Rates Over the Years by Location</Link>
                 <Link to="/allyearlyrates">All Mortality Rates Over the Years</Link>
+                <Link to="/yearlyrates">Mortality Rates Over the Years by Location</Link>
               </nav>
             </div>
             <Routes>
