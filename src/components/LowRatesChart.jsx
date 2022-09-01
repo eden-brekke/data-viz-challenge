@@ -31,7 +31,7 @@ export default function Chart({ data }) {
   } else {
     return (
       <>
-        <h3 className="graph-title">Bottom Twenty Locations with the Highest Mortality Rates within a Year</h3>
+        <h3 className="graph-title">Twenty Locations with the Lowest Mortality Rates within a Year</h3>
         <div className='graph-div'>
         <svg ref={chart}></svg>
         </div>

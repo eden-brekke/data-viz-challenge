@@ -27,9 +27,7 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
   if (chartType === 'highrates' || chartType === 'lowrates') {
     return (
       <>
-        <p className="control-panel-text">Here you can generate data for mortality rates of Opioid Use Disease. <br></br> Choose a Sex and a Year to narrow the scope of the data. <br></br>
-          Navigate Between "Hightest" and "Lowest" Mortality Rates by Year to toggle which limit of the graph you are accessing.
-        </p>
+        <p className="control-panel-text">Here you can generate data for mortality rates of Opioid Use Disease. <br></br> Choose a Sex and a Year to narrow the scope of the data.</p>
         <div className="App">
           <form className='form' onSubmit={dataHandler}>
             <div className="control">
@@ -58,8 +56,7 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
     const sortLoc = locMeta.sort((a,b) => a.location_name.localeCompare(b.location_name));
     return (
       <>
-        <p className="control-panel-text">Here you can generate biological sex comparison data for the mortality rates of through the years due to Opioid Use Disease. <br></br> Choose a Location to narrow the scope of the data. <br></br>Navigate to All Mortality Rates Over the Years in order to generate a comparison between location, instead of a comparison between biological sex.
-        </p>
+        <p className="control-panel-text">Here you can generate biological sex comparison data for the mortality rates of through the years due to Opioid Use Disease. <br></br> Choose a Location to narrow the scope of the data.</p>
         <div className="App">
           <form className="form" onSubmit={dataHandler}>
             <div className="control">
@@ -79,8 +76,7 @@ function ControlPanel({ sexMeta, locMeta, yearMeta, chartType }) {
   }else if (chartType === 'allyearly') {
     return (
       <>
-        <p className="control-panel-text">Here you can generate location comparison data for the mortality rates of through the years due to Opioid Use Disease. <br></br> Choose a Sex to narrow the scope of the data. <br></br>Navigate to Mortality Rates Over the Years by Location, in order to generate a comparison between biological sex, instead of a comparison between location.
-        </p>
+        <p className="control-panel-text">Here you can generate location comparison data for the mortality rates of through the years due to Opioid Use Disease. <br></br> Choose a Sex to narrow the scope of the data.</p>
         <div className="App">
           <form className="form" onSubmit={dataHandler}>
           <div className="control">
