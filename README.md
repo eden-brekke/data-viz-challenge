@@ -27,6 +27,11 @@ Important aspects for me to hit are:
 [Rainbow Button](https://codepen.io/astitva2009/embed/ExQeNxb?height=441&theme-id=dark&default-tab=result&slug-hash=ExQeNxb&user=astitva2009&name=cp_embed_51#css-box)  
 [Rotate Axis Labels](https://stackoverflow.com/questions/20947488/d3-grouped-bar-chart-how-to-rotate-the-text-of-x-axis-ticks)  
 
+### Known Bugs
+
+- Waiting For Input animation does not load when navigating between chart pages, will re-render if you navigate to home first.
+- Have to click on the generate chart button twice, once to get rid of the input animation and a second time to generate the graph, if the waiting for input animation is not visible, you only need to click the generate chart button once. 
+
 ## Assignment as Described by IHME
 
 Below are the specifications that were laid out for the application by GIG at IHME
